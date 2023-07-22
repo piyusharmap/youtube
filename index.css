@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&family=Urbanist&display=swap');
 
 @tailwind base;
+
+*::-webkit-scrollbar {
+   width: 8px;
+ }
+ 
+ *::-webkit-scrollbar-track {
+   background: #08090a;
+ }
+ 
+ *::-webkit-scrollbar-thumb {
+   background-color: #222222;
+   border-radius: 10px;
+ }
+
 @tailwind components;
 @tailwind utilities;
+
+body{
+   background-color: #08090a;
+   color: #ffffff
+}

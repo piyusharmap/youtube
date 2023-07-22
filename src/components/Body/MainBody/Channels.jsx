@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Channels() {
   return (
-    <div className="p-1 font-primary flex flex-wrap items-center gap-4 bg-blackMain">
+    <div className="p-1 font-primary flex flex-wrap items-center gap-4 bg-blackMain cursor-default">
       <div className="py-1 px-2 flex items-center bg-blackSecondary rounded-md cursor-po hover:bg-blackMain">
         <FontAwesomeIcon className="p-2 text-lg" icon={faUser} />
         <p className="p-2 text-sm">For You</p>

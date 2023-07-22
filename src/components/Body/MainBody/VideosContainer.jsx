@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import VideoCard from "./VideoCard";
 import VideosContainerShimmer from "./VideosContainerShimmer";
-import { API_KEY, VIDEO_LIST_API } from "../../constant";
+import { API_KEY, VIDEO_LIST_API } from "../../../constant";
 
 export default function VideosContainer() {
   const [videoList, setVideoList] = useState([]);

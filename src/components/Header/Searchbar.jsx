@@ -6,12 +6,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { SEARCH_API } from "../../constant";
-import store from "../../app/store";
+import { SEARCH_SUGGESTIONS_API } from "../../constant";
 import {
   addSearchResult,
   clearSearchResult,
 } from "../../app/slices/searchSlice";
+import store from "../../app/store";
 
 export default function Searchbar() {
   const dispatch = useDispatch();
@@ -36,7 +36,7 @@ export default function Searchbar() {
 
   const getSearchSuggestions = async () => {
     try {
-      const data = await fetch(SEARCH_API + searchQuery);
+      const data = await fetch(SEARCH_SUGGESTIONS_API + searchQuery);
       const json = await data.json();
 
       setSearchSuggestions(json[1]);
@@ -50,7 +50,7 @@ export default function Searchbar() {
   return (
     <div className="px-2 flex items-center bg-blackSecondary/50 rounded-full relative">
       <input
-        className="w-80 p-2 font-primary text-base bg-transparent focus:outline-0 focus:w-96 transition-all"
+        className="w-80 p-2 font-primary text-base bg-transparent focus:outline-0 focus:w-96"
         type="text"
         placeholder="Search"
         value={searchQuery}
@@ -58,9 +58,12 @@ export default function Searchbar() {
         onFocus={() => setSuggestionBoxVisibility(true)}
       />
 
-      <button className="p-2 hover:text-redMain">
+      <a
+        href={"/results?search_query=" + searchQuery}
+        className="p-2 hover:text-redMain"
+      >
         <FontAwesomeIcon className="text-base" icon={faMagnifyingGlass} />
-      </button>
+      </a>
 
       {suggestionBoxVisibility && searchSuggestions.length > 0 && (
         <div className="w-full bg-blackSecondary absolute top-[110%] left-0 rounded-md">

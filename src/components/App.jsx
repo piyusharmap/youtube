@@ -6,20 +6,19 @@ import Sidebar from "./Sidebar/Sidebar";
 import Body from "./Body/Body";
 import store from "../app/store";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Channels from "./Body/Channels";
-import VideosContainer from "./Body/VideosContainer";
 import Home from "./Body/Home";
-import VideoShowcase from "./Body/VideoShowcase";
+import VideoShowcase from "./Body/Showcase/VideoShowcase";
+import Error from "./Error/Error";
+import SearchResults from "./Body/SearchResults/SearchResults";
 
 export default function App() {
   return (
     <Provider store={store}>
-      <div className="bg-blackMain text-white">
+      <div className="bg-blackMain text-white transition-all">
         <Header />
         <div className="min-h-screen flex items-start relative">
           <Sidebar />
           <RouterProvider router={appRouter} />
-          {/* <Body /> */}
         </div>
       </div>
     </Provider>
@@ -30,7 +29,7 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <Body />,
-    errorElement: <h1>Error screen</h1>,
+    errorElement: <Error />,
     children: [
       {
         path: "",
@@ -41,5 +40,9 @@ const appRouter = createBrowserRouter([
         element: <VideoShowcase />,
       },
     ],
+  },
+  {
+    path: "/results",
+    element: <SearchResults />,
   },
 ]);

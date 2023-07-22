@@ -3,7 +3,7 @@ export function formatDuration(duration) {
     typeof duration !== "string" ||
     !/^PT(\d+H)?(\d+M)?(\d+S)?$/.test(duration)
   ) {
-    return "Invalid duration format. Please provide a valid duration in the format 'PT1M16S'.";
+    return "00:00";
   }
 
   let hours = 0;
@@ -32,9 +32,9 @@ export function formatDuration(duration) {
   )}:${padZero(seconds)}`;
 }
 
-export function formatViewCount(count) {
+export function formatCount(count) {
   if (typeof count !== "number" && typeof count !== "string") {
-    return "Invalid input. Please provide a valid number or number as a string.";
+    return "0";
   }
 
   let num = typeof count === "string" ? parseInt(count, 10) : count;
@@ -59,7 +59,7 @@ export function formatViewCount(count) {
 export function formatPublishedAt(dateString) {
   const providedDate = new Date(dateString);
   if (isNaN(providedDate)) {
-    return "Invalid date format. Please provide a valid date in the format '2023-07-20T13:30:19Z'.";
+    return "0 days ago";
   }
 
   const currentTime = new Date();

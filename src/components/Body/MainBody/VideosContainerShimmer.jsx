@@ -1,4 +1,4 @@
-import { VIDEO_SHIMMER_VALUE } from "../../constant";
+import { VIDEO_SHIMMER_VALUE } from "../../../constant";
 
 const ShimmerCard = () => {
   return (
@@ -12,7 +12,7 @@ const ShimmerCard = () => {
 
 export default function VideosContainerShimmer() {
   return (
-    <div className="py-2 flex flex-wrap justify-around items-start">
+    <div className="py-2 flex flex-wrap justify-around items-start animate-pulse">
       {new Array(VIDEO_SHIMMER_VALUE).fill(0).map((element, index) => {
         return <ShimmerCard key={index} />;
       })}

@@ -15,7 +15,7 @@ export default function Header() {
   const dispatch = useDispatch();
 
   return (
-    <div className="py-2 px-8 bg-blackMain text-white flex justify-between items-center gap-4 shadow-lg sticky top-0 left-0 z-20">
+    <div className="py-2 px-8 bg-blackMain text-white flex justify-between items-center gap-4 sticky top-0 left-0 z-20">
       <div className="flex items-center gap-4">
         <div className="flex justify-center items-center gap-2">
           <button
@@ -28,12 +28,12 @@ export default function Header() {
             />
           </button>
 
-          <img className="w-9" alt="youtube logo" src={Logo} />
+          <img className="w-9 hover:opacity-80" alt="youtube logo" src={Logo} />
 
-          <p className="font-secondary text-xl">
+          <a href="/" className="font-secondary text-xl">
             Youtube
             <span className="ml-1 text-sm opacity-80">IN</span>
-          </p>
+          </a>
         </div>
 
         <div className="ml-4">
@@ -44,16 +44,16 @@ export default function Header() {
       <div className="flex items-center gap-4">
         <div className="p-2 flex items-center gap-4">
           <FontAwesomeIcon
-            className="p-2 text-lg border-b-[2px] border-transparent hover:border-redMain transition-colors"
+            className="p-2 text-lg border-b-[2px] border-transparent hover:border-redMain"
             icon={faSquarePlus}
           />
           <FontAwesomeIcon
-            className="p-2 text-lg border-b-[2px] border-transparent hover:border-redMain transition-colors"
+            className="p-2 text-lg border-b-[2px] border-transparent hover:border-redMain"
             icon={faBell}
           />
         </div>
 
-        <div className="h-10 w-10 p-1 flex justify-center items-center rounded-full border-[1px] border-transparent hover:border-redMain transition-colors">
+        <div className="h-10 w-10 p-1 flex justify-center items-center rounded-full border-[1px] border-transparent hover:border-redMain">
           <FontAwesomeIcon className="text-xl" icon={faUser} />
         </div>
       </div>
