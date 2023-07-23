@@ -27,7 +27,7 @@ export default function VideosContainer() {
   if (!videoList) return <VideosContainerShimmer />;
 
   return (
-    <div className="py-2 flex flex-wrap justify-around items-start">
+    <div className="py-2 flex flex-wrap justify-between items-start">
       {videoList.map((video) => {
         return (
           <Link

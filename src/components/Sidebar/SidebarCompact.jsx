@@ -1,37 +1,41 @@
 import {
-  faBookmark,
-  faCompass,
-  faFileVideo,
-  faFireAlt,
   faHouse,
+  faFire,
+  faSquareCheck,
+  faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function SidebarCompact() {
   return (
     <div className="p-2 sticky top-20 left-0">
-      <ul className="p-2 flex flex-col items-start">
+      <ul className="py-2 px-4 flex flex-col items-start">
         <a
           href="/"
-          className="mb-2 p-2 text-lg border-l-2 border-transparent hover:border-redMain cursor-pointer"
+          className="mb-4 h-8 w-8 flex justify-center items-center border-b-2 border-transparent hover:border-redMain"
         >
-          <FontAwesomeIcon className="px-2 text-xl" icon={faHouse} />
+          <FontAwesomeIcon className="text-lg" icon={faHouse} />
         </a>
 
-        <a className="mb-2 p-2 text-lg border-l-2 border-transparent hover:border-redMain cursor-pointer">
-          <FontAwesomeIcon className="px-2 text-xl" icon={faFireAlt} />
+        <a
+          href="#"
+          className="mb-4 h-8 w-8 flex justify-center items-center border-b-2 border-transparent hover:border-redMain"
+        >
+          <FontAwesomeIcon className="text-lg" icon={faFire} />
         </a>
 
-        <a className="mb-2 p-2 text-lg border-l-2 border-transparent hover:border-redMain cursor-pointer">
-          <FontAwesomeIcon className="px-2 text-xl" icon={faCompass} />
+        <a
+          href="#"
+          className="mb-4 h-8 w-8 flex justify-center items-center border-b-2 border-transparent hover:border-redMain"
+        >
+          <FontAwesomeIcon className="text-lg" icon={faSquareCheck} />
         </a>
 
-        <a className="mb-2 p-2 text-lg border-l-2 border-transparent hover:border-redMain cursor-pointer">
-          <FontAwesomeIcon className="px-2 text-xl" icon={faBookmark} />
-        </a>
-
-        <a className="mb-2 p-2 text-lg border-l-2 border-transparent hover:border-redMain cursor-pointer">
-          <FontAwesomeIcon className="px-2 text-xl" icon={faFileVideo} />
+        <a
+          href="#"
+          className="mb-4 h-8 w-8 flex justify-center items-center border-b-2 border-transparent hover:border-redMain"
+        >
+          <FontAwesomeIcon className="text-lg" icon={faVideo} />
         </a>
       </ul>
     </div>

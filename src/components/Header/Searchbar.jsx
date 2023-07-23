@@ -50,7 +50,7 @@ export default function Searchbar() {
   return (
     <div className="px-2 flex items-center bg-blackSecondary/50 rounded-full relative">
       <input
-        className="w-80 p-2 font-primary text-base bg-transparent focus:outline-0 focus:w-96"
+        className="w-96 p-2 text-base bg-transparent focus:outline-0"
         type="text"
         placeholder="Search"
         value={searchQuery}

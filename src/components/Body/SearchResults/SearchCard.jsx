@@ -5,7 +5,7 @@ const TypeVideo = ({ info }) => {
   return (
     <a
       href={"/watch?v=" + info?.id?.videoId}
-      className="p-2 flex items-start gap-4 font-primary"
+      className="p-2 flex items-start gap-4"
     >
       <img
         className="rounded-md"
@@ -28,7 +28,7 @@ const TypeVideo = ({ info }) => {
 const TypeChannel = ({ info }) => {
   const { snippet } = info;
   return (
-    <div className="p-2 flex items-center gap-4 font-primary">
+    <div className="p-2 flex items-center gap-4">
       <img
         className="rounded-full"
         alt="video thumbnail"

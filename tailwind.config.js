@@ -9,8 +9,8 @@ export default {
         blackSecondary: "#222222",
       },
       fontFamily: {
-        primary: "Urbanist",
-        secondary: "Staatliches",
+        primary: "DM Sans",
+        secondary: "Teko",
       },
     },
   },

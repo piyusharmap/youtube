@@ -23,10 +23,13 @@ export default function VideoSuggestions({ id }) {
 
   return (
     <div className="p-2 flex flex-wrap justify-between items-start gap-2">
-      {videoSuggestions > 0 &&
+      {videoSuggestions > 0 ? (
         videoSuggestions.map((video) => {
           return <SuggestionCard key={video?.id?.videoId} info={video} />;
-        })}
+        })
+      ) : (
+        <p className="text-sm opacity-80">No videos available</p>
+      )}
     </div>
   );
 }

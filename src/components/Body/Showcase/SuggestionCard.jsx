@@ -4,7 +4,7 @@ import Image from "../../../assets/image_placeholder.png";
 
 export default function SuggestionCard({ info }) {
   return (
-    <div className="w-1/4 mb-2 font-primary cursor-pointer">
+    <div className="w-1/4 mb-2 cursor-pointer">
       <img
         className="w-full rounded-md"
         alt="video thumbnail"

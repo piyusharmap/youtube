@@ -8,8 +8,8 @@ const CommentItem = ({ info }) => {
 
   return (
     <div className="p-2 flex items-start gap-2 cursor-default">
-      <h1 className="py-1 px-2 uppercase border-[1px] border-blackSecondary">
-        {info?.author.slice(0, 2)}
+      <h1 className="h-8 w-8 flex justify-center items-center border-[1px] border-blackSecondary rounded-full">
+        {info?.author.slice(0, 1)}
       </h1>
 
       <div className="flex-grow">
@@ -17,6 +17,7 @@ const CommentItem = ({ info }) => {
           @{info?.author}
           <span className="px-2 text-xs opacity-80">{info?.postedAt}</span>
         </p>
+
         {info.replies.length > 0 && (
           <p
             className="text-sm"
@@ -31,12 +32,15 @@ const CommentItem = ({ info }) => {
             />
           </p>
         )}
+
         <p className="py-1">{info?.comment}</p>
 
-        {replyVisibility &&
-          info?.replies.map((reply) => {
-            return <CommentItem key={reply.id} info={reply} />;
-          })}
+        <div className="border-l-2 border-blackSecondary">
+          {replyVisibility &&
+            info?.replies.map((reply) => {
+              return <CommentItem key={reply.id} info={reply} />;
+            })}
+        </div>
       </div>
     </div>
   );
@@ -80,12 +84,21 @@ export default function CommentsBox() {
           onChange={(e) => setCommentText(e.target.value)}
         />
         {commentText !== "" && (
-          <button
-            className="py-1 px-2 self-end bg-redMain rounded-full"
-            onClick={() => addComment()}
-          >
-            Comment
-          </button>
+          <div className="flex items-center gap-2 self-end">
+            <button
+              className="p-2 text-sm bg-blackSecondary hover:bg-blackMain rounded-full"
+              onClick={() => setCommentText("")}
+            >
+              Cancel
+            </button>
+
+            <button
+              className="p-2 text-sm bg-redMain hover:bg-redMain/80 rounded-full"
+              onClick={() => addComment()}
+            >
+              Comment
+            </button>
+          </div>
         )}
       </div>
 

@@ -12,7 +12,7 @@ export default function VideoCard({ info }) {
   const stats = info?.statistics;
 
   return (
-    <div className="font-primary cursor-pointer">
+    <div className="cursor-pointer">
       <div className="relative">
         <img
           className="w-full rounded-md"

@@ -53,7 +53,7 @@ export default function VideoShowcase() {
   };
 
   return (
-    <div className="min-h-screen flex gap-2 font-primary">
+    <div className="min-h-screen flex gap-2">
       <div className="w-2/3 p-2 flex flex-col items-center">
         <iframe
           className="h-[500px] w-full"
@@ -71,6 +71,7 @@ export default function VideoShowcase() {
                 alt="channel profile"
                 src={channelInfo?.snippet?.thumbnails?.default?.url}
               />
+
               <div className="flex flex-col">
                 <a
                   target="_blank"
@@ -81,8 +82,8 @@ export default function VideoShowcase() {
                   {channelInfo?.snippet?.title}
                 </a>
                 <p className="text-sm opacity-80">
-                  {formatCount(channelInfo?.statistics?.subscriberCount)}
-                  subscribers
+                  {formatCount(channelInfo?.statistics?.subscriberCount) +
+                    " subscribers"}
                 </p>
               </div>
             </div>
@@ -108,7 +109,7 @@ export default function VideoShowcase() {
               Subscribe
             </button>
 
-            <button className="h-fit py-2 px-4 text-base bg-blackSecondary hover:bg-blackSecondary/80 hover:text-white rounded-full">
+            <button className="h-fit py-2 px-4 text-base bg-blackSecondary hover:bg-blackMain rounded-full">
               <FontAwesomeIcon className="mr-2 text-sm" icon={faShare} />
               Share
             </button>
@@ -158,7 +159,7 @@ export default function VideoShowcase() {
           )}
         </div>
 
-        <div className="w-full p-2 border-t-2 border-blackSecondary">
+        <div className="w-full border-t-2 border-blackSecondary">
           <h1 className="p-2 text-lg">You might also like</h1>
           <VideoSuggestions id={videoInfo?.id} />
         </div>
