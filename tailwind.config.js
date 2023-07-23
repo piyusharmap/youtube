@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        blackMain: "#08090a",
+        blackMain: "#0f0f0f",
         redMain: "#FF0000",
-        blackSecondary: "#222222",
+        blackSecondary: "#282828",
       },
       fontFamily: {
         primary: "DM Sans",
