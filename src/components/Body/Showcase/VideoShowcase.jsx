@@ -1,4 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronDown,
+  faChevronUp,
+  faShare,
+} from "@fortawesome/free-solid-svg-icons";
 import { faCircleDown, faCircleUp } from "@fortawesome/free-regular-svg-icons";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
@@ -7,8 +12,8 @@ import { useSearchParams } from "react-router-dom";
 import { closeSidebar } from "../../../app/slices/sidebarSlice";
 import { API_KEY, CHANNEL_INFO_API, VIDEO_INFO_API } from "../../../constant";
 import { formatCount, formatPublishedAt } from "../../../utils/formatFunctions";
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import CommentsBox from "./CommentsBox";
+import VideoSuggestions from "./VideoSuggestions";
 
 export default function VideoShowcase() {
   const dispatch = useDispatch();
@@ -104,6 +109,7 @@ export default function VideoShowcase() {
             </button>
 
             <button className="h-fit py-2 px-4 text-base bg-blackSecondary hover:bg-blackSecondary/80 hover:text-white rounded-full">
+              <FontAwesomeIcon className="mr-2 text-sm" icon={faShare} />
               Share
             </button>
           </div>
@@ -144,8 +150,17 @@ export default function VideoShowcase() {
                     {paragraph}
                   </p>
                 ))}
+              <button onClick={() => setShowDescription(false)} className="p-2">
+                Hide Description
+                <FontAwesomeIcon className="text-xs ml-2" icon={faChevronUp} />
+              </button>
             </div>
           )}
+        </div>
+
+        <div className="w-full p-2 border-t-2 border-blackSecondary">
+          <h1 className="p-2 text-lg">You might also like</h1>
+          <VideoSuggestions id={videoInfo?.id} />
         </div>
       </div>
 

@@ -59,7 +59,7 @@ export default function Searchbar() {
       />
 
       <a
-        href={"/results?search_query=" + searchQuery}
+        href={searchQuery != "" ? "/results?search_query=" + searchQuery : null}
         className="p-2 hover:text-redMain"
       >
         <FontAwesomeIcon className="text-base" icon={faMagnifyingGlass} />

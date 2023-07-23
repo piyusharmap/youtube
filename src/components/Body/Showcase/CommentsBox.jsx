@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const CommentItem = ({ info }) => {
-  const [replyVisibility, setReplyVisibility] = useState(true);
+  const [replyVisibility, setReplyVisibility] = useState(false);
 
   return (
     <div className="p-2 flex items-start gap-2 cursor-default">
@@ -69,7 +69,7 @@ export default function CommentsBox() {
 
   return (
     <>
-      <h1 className="text-lg">{comments.length}Comments</h1>
+      <h1 className="text-lg">{comments.length + " Comments"}</h1>
 
       <div className="py-4 flex flex-col gap-2">
         <input

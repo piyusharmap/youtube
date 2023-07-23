@@ -1,9 +1,9 @@
 import {
   faFireAlt,
   faHouse,
-  faPlay,
   faBookmark,
   faFileVideo,
+  faCompass,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -25,7 +25,7 @@ export default function SidebarExpand() {
         </a>
 
         <a className="mb-2 p-2 text-lg border-l-2 border-transparent hover:border-redMain cursor-pointer">
-          <FontAwesomeIcon className="mr-2 px-2 text-xl" icon={faPlay} />
+          <FontAwesomeIcon className="mr-2 px-2 text-xl" icon={faCompass} />
           Explore
         </a>
 

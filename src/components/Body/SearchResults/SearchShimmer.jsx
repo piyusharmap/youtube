@@ -5,8 +5,8 @@ const ShimmerCard = () => {
     <div className="w-full p-2 flex items-start gap-4 animate-pulse">
       <div className="h-52 w-96 bg-blackSecondary rounded-md"></div>
       <div className="w-full p-2">
-        <p className="w-full mb-2 p-4 bg-blackSecondary"></p>
-        <p className="w-1/2 p-4 bg-blackSecondary"></p>
+        <p className="mb-2 w-1/2 p-4 bg-blackSecondary"></p>
+        <p className="w-4/5 p-4 bg-blackSecondary"></p>
       </div>
     </div>
   );

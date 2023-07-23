@@ -22,23 +22,22 @@ export default function SearchResults() {
       setSearchResults(json?.items);
     } catch (error) {
       console.log(error);
+      setSearchResults([]);
     }
   };
 
+  if (!searchResults) return <SearchShimmer />;
+
   return (
     <div className="flex flex-col items-start gap-4 flex-grow p-2">
-      {searchResults.length === 0 ? (
-        <SearchShimmer />
-      ) : (
-        searchResults.map((result) => {
-          return (
-            <SearchCard
-              key={result?.id?.videoId || result?.id?.channelId}
-              info={result}
-            />
-          );
-        })
-      )}
+      {searchResults.map((result) => {
+        return (
+          <SearchCard
+            key={result?.id?.videoId || result?.id?.channelId}
+            info={result}
+          />
+        );
+      })}
     </div>
   );
 }
