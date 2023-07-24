@@ -18,18 +18,18 @@ export default function VideoSuggestions({ id }) {
       setVideoSuggestions(json?.items);
     } catch (error) {
       console.log(error);
-      setVideoSuggestions([]);
+      setVideoSuggestions(null);
     }
   };
 
-  if (!videoSuggestions)
-    return <p className="text-sm opacity-80">No videos available</p>;
-
   return (
     <div className="p-2 flex flex-wrap justify-between items-start gap-2">
-      {videoSuggestions.map((video) => {
-        return <SuggestionCard key={video?.id?.videoId} info={video} />;
-      })}
+      {videoSuggestions &&
+        videoSuggestions.map((video) => {
+          {
+            return <SuggestionCard key={video?.id?.videoId} info={video} />;
+          }
+        })}
     </div>
   );
 }

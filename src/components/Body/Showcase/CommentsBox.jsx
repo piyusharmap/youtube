@@ -9,7 +9,7 @@ const CommentItem = ({ info }) => {
 
   return (
     <div className="p-2 flex items-start gap-2 cursor-default">
-      <h1 className="h-8 w-8 flex justify-center items-center border-[1px] border-blackSecondary rounded-full">
+      <h1 className="h-8 w-8 flex justify-center items-center bg-blue-600 rounded-full">
         {info?.author.slice(0, 1)}
       </h1>
 
@@ -77,13 +77,21 @@ export default function CommentsBox() {
       <h1 className="text-lg">{comments.length + " Comments"}</h1>
 
       <div className="py-4 flex flex-col gap-2">
-        <input
-          className="w-full p-2 bg-transparent border-b-[1px] border-blackSecondary focus:outline-0"
-          type="text"
-          placeholder="Add a comment"
-          value={commentText}
-          onChange={(e) => setCommentText(e.target.value)}
-        />
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            addComment();
+          }}
+        >
+          <input
+            className="w-full p-2 bg-transparent border-b-[1px] border-blackSecondary focus:outline-0"
+            type="text"
+            placeholder="Add a comment"
+            value={commentText}
+            onChange={(e) => setCommentText(e.target.value)}
+          />
+        </form>
+
         {commentText !== "" && (
           <div className="flex items-center gap-2 self-end">
             <button

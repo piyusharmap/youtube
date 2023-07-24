@@ -6,7 +6,7 @@ import {
   formatPublishedAt,
   formatCount,
 } from "../../../utils/formatFunctions";
-import Image from "../../../assets/image_placeholder.webp";
+import Image from "../../../assets/video_placeholder.webp";
 
 export default function VideoCard({ info }) {
   const snippet = info?.snippet;
@@ -30,20 +30,17 @@ export default function VideoCard({ info }) {
         </p>
       </div>
 
-      <h1 className="mt-1">{snippet?.title.slice(0, 45) + "..."}</h1>
+      <h1 className="mt-1">{snippet?.title}</h1>
 
-      <p className="opacity-80 hover:opacity-100">
+      <p className="mt-2 text-sm opacity-80 hover:opacity-100">
         {snippet?.channelTitle}
         <FontAwesomeIcon className="ml-2 text-xs" icon={faCircleCheck} />
       </p>
 
-      <div className="flex items-center gap-4">
-        <p className="text-sm opacity-80">
-          {formatCount(stats?.viewCount) + " views"}
-        </p>
-        <p className="text-sm opacity-80">
-          {formatPublishedAt(snippet?.publishedAt)}
-        </p>
+      <div className="text-sm flex items-center gap-4 opacity-80">
+        <p>{formatCount(stats?.viewCount) + " views"}</p>
+        <p>|</p>
+        <p>{formatPublishedAt(snippet?.publishedAt)}</p>
       </div>
     </div>
   );

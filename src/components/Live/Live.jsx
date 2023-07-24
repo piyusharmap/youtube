@@ -13,7 +13,7 @@ export default function Live() {
   }, []);
 
   return (
-    <div className="p-2 flex items-start gap-2">
+    <div className="p-2 flex justify-center items-start gap-2">
       <LiveVideo />
       <LiveChat />
     </div>

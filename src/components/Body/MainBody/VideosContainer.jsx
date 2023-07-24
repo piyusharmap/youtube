@@ -24,7 +24,7 @@ export default function VideosContainer() {
     }
   };
 
-  if (!videoList) return <VideosContainerShimmer />;
+  if (videoList.length === 0 || !videoList) return <VideosContainerShimmer />;
 
   return (
     <div className="py-2 flex flex-wrap justify-between items-start">
@@ -33,7 +33,7 @@ export default function VideosContainer() {
           <Link
             key={video.id}
             to={"/watch?v=" + video.id}
-            className="w-1/4 m-1 p-2 mb-8 rounded-md border-[1px] border-transparent hover:border-blackSecondary"
+            className="w-[30%] m-1 p-2 mb-8 rounded-md border-[1px] border-transparent hover:border-blackSecondary"
           >
             <VideoCard info={video} />
           </Link>

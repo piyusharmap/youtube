@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
 import { formatPublishedAt } from "../../../utils/formatFunctions";
-import Image from "../../../assets/image_placeholder.webp";
+import Image from "../../../assets/video_placeholder.webp";
 
 export default function SuggestionCard({ info }) {
   return (

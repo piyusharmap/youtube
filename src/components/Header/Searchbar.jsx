@@ -11,7 +11,6 @@ import {
   addSearchResult,
   clearSearchResult,
 } from "../../app/slices/searchSlice";
-import store from "../../app/store";
 
 export default function Searchbar() {
   const dispatch = useDispatch();

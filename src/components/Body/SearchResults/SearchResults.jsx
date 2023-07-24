@@ -27,7 +27,7 @@ export default function SearchResults() {
     }
   };
 
-  if (!searchResults) return <SearchShimmer />;
+  if (searchResults.length === 0 || !searchResults) return <SearchShimmer />;
 
   return (
     <div className="flex flex-col items-start gap-4 flex-grow p-2">

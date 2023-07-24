@@ -51,6 +51,7 @@ export default function VideoShowcase() {
       setChannelInfo({});
     }
   };
+
   return (
     <div className="min-h-screen flex gap-2">
       <div className="w-2/3 p-2 flex flex-col items-center">
@@ -159,7 +160,6 @@ export default function VideoShowcase() {
         </div>
 
         <div className="w-full border-t-2 border-blackSecondary">
-          <h1 className="p-2 text-lg">You might also like</h1>
           <VideoSuggestions id={videoInfo?.id} />
         </div>
       </div>
