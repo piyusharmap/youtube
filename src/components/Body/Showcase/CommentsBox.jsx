@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { COMMENTS_DATA } from "../../../constant";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+
+import { COMMENTS_DATA } from "../../../constant";
 
 const CommentItem = ({ info }) => {
   const [replyVisibility, setReplyVisibility] = useState(false);
@@ -102,7 +103,7 @@ export default function CommentsBox() {
         )}
       </div>
 
-      <div className="h-screen w-full p-2 border-[1px] border-blackSecondary rounded-lg overflow-y-scroll">
+      <div className="h-screen w-full p-2 border-[1px] border-blackSecondary overflow-y-scroll">
         {comments.map((comment) => {
           return <CommentItem key={comment.id} info={comment} />;
         })}

@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+
 import { API_KEY, SEARCH_API } from "../../../constant";
 import SearchCard from "./SearchCard";
 import SearchShimmer from "./SearchShimmer";

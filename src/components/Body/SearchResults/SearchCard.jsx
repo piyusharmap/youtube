@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+
 import { formatPublishedAt } from "../../../utils/formatFunctions";
 
 const TypeVideo = ({ info }) => {
@@ -5,7 +8,7 @@ const TypeVideo = ({ info }) => {
   return (
     <a
       href={"/watch?v=" + info?.id?.videoId}
-      className="p-2 flex items-start gap-4"
+      className="w-full p-2 flex items-start gap-4"
     >
       <img
         className="rounded-md"
@@ -15,11 +18,14 @@ const TypeVideo = ({ info }) => {
 
       <div className="p-2">
         <h1 className="text-xl">{snippet?.title}</h1>
-        <p className="py-2">{snippet?.channelTitle}</p>
-        <p className="text-sm opacity-80">
+        <p className="mt-2">
+          {snippet?.channelTitle}
+          <FontAwesomeIcon className="ml-2 text-xs" icon={faCircleCheck} />
+        </p>
+        <p className="mt-1 text-xs opacity-80">
           {formatPublishedAt(snippet?.publishTime)}
         </p>
-        <p className="py-2 text-sm opacity-80">{snippet?.description}</p>
+        <p className="mt-1 text-xs opacity-80">{snippet?.description}</p>
       </div>
     </a>
   );
@@ -28,9 +34,9 @@ const TypeVideo = ({ info }) => {
 const TypeChannel = ({ info }) => {
   const { snippet } = info;
   return (
-    <div className="p-2 flex items-center gap-4">
+    <div className="w-full p-2 flex items-center gap-4">
       <img
-        className="rounded-full"
+        className="h-24 w-24 rounded-full outline outline-2 outline-redMain outline-offset-2"
         alt="video thumbnail"
         src={snippet?.thumbnails?.medium?.url}
       />

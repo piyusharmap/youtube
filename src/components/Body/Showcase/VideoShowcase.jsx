@@ -51,7 +51,6 @@ export default function VideoShowcase() {
       setChannelInfo({});
     }
   };
-
   return (
     <div className="min-h-screen flex gap-2">
       <div className="w-2/3 p-2 flex flex-col items-center">

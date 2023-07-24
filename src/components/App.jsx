@@ -1,10 +1,12 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
 import Header from "./Header/Header";
 import Sidebar from "./Sidebar/Sidebar";
 import Body from "./Body/Body";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./Body/Home";
-import VideoShowcase from "./Body/Showcase/VideoShowcase";
 import Error from "./Error/Error";
+import Live from "./Live/Live";
+import VideoShowcase from "./Body/Showcase/VideoShowcase";
 import SearchResults from "./Body/SearchResults/SearchResults";
 
 export default function App() {
@@ -38,5 +40,9 @@ const appRouter = createBrowserRouter([
   {
     path: "/results",
     element: <SearchResults />,
+  },
+  {
+    path: "/live",
+    element: <Live />,
   },
 ]);

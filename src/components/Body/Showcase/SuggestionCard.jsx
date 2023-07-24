@@ -1,10 +1,12 @@
-import { formatPublishedAt } from "../../../utils/formatFunctions";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
-import Image from "../../../assets/image_placeholder.png";
+import { formatPublishedAt } from "../../../utils/formatFunctions";
+import Image from "../../../assets/image_placeholder.webp";
 
 export default function SuggestionCard({ info }) {
   return (
-    <div className="w-1/4 mb-2 cursor-pointer">
+    <div className="w-1/4 mb-2 p-2 cursor-pointer border-[1px] border-transparent hover:border-blackSecondary rounded-md">
       <img
         className="w-full rounded-md"
         alt="video thumbnail"
@@ -15,15 +17,14 @@ export default function SuggestionCard({ info }) {
         }
       />
 
-      <h1 className="mt-1 text-lg">
-        {info?.snippet?.title.slice(0, 40) + "..."}
-      </h1>
+      <h1 className="text-lg">{info?.snippet?.title.slice(0, 40) + "..."}</h1>
 
-      <p className="text-base opacity-80 hover:opacity-100">
+      <p className="hover:opacity-100">
         {info?.snippet?.channelTitle}
+        <FontAwesomeIcon className="ml-2 text-xs" icon={faCircleCheck} />
       </p>
 
-      <p className="text-sm opacity-80">
+      <p className="text-xs opacity-80">
         {formatPublishedAt(info?.snippet?.publishedAt)}
       </p>
     </div>

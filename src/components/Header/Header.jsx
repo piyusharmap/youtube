@@ -58,7 +58,7 @@ export default function Header() {
       <div className="flex items-center gap-4">
         <div className="p-2 flex items-center gap-2 relative">
           <FontAwesomeIcon
-            className={`p-2 text-lg border-b-[2px] ${
+            className={`p-2 text-xl border-b-[2px] ${
               showCreate ? "border-redMain" : "border-transparent"
             } hover:border-redMain cursor-pointer`}
             icon={faSquarePlus}
@@ -67,7 +67,7 @@ export default function Header() {
           />
 
           <FontAwesomeIcon
-            className={`p-2 text-lg border-b-[2px] ${
+            className={`p-2 text-xl border-b-[2px] ${
               showNotification ? "border-redMain" : "border-transparent"
             } hover:border-redMain cursor-pointer`}
             icon={faBell}

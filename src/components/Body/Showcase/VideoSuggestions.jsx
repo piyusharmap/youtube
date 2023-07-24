@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+
 import { API_KEY, SIMILAR_VIDEOS_API } from "../../../constant";
 import SuggestionCard from "./SuggestionCard";
 
@@ -21,15 +22,14 @@ export default function VideoSuggestions({ id }) {
     }
   };
 
+  if (!videoSuggestions)
+    return <p className="text-sm opacity-80">No videos available</p>;
+
   return (
     <div className="p-2 flex flex-wrap justify-between items-start gap-2">
-      {videoSuggestions > 0 ? (
-        videoSuggestions.map((video) => {
-          return <SuggestionCard key={video?.id?.videoId} info={video} />;
-        })
-      ) : (
-        <p className="text-sm opacity-80">No videos available</p>
-      )}
+      {videoSuggestions.map((video) => {
+        return <SuggestionCard key={video?.id?.videoId} info={video} />;
+      })}
     </div>
   );
 }
