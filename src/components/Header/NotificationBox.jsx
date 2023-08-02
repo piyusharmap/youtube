@@ -1,4 +1,8 @@
-import { faGear } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGear,
+  faPodcast,
+  faSquarePlus,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const TypeCreate = () => {
@@ -7,11 +11,13 @@ const TypeCreate = () => {
       href="/live"
       className="w-36 p-2 bg-blackSecondary absolute top-full right-0 rounded-md shadow-lg"
     >
-      <button className="w-full mb-1 p-2 text-lg bg-redMain/80 hover:bg-redMain rounded-md">
+      <button className="w-full mb-1 p-2 text-lg bg-redMain hover:bg-redMain/80 rounded-md">
+        <FontAwesomeIcon className="mr-2" icon={faPodcast} />
         Go Live
       </button>
 
-      <button className="w-full mb-1 p-2 text-lg bg-redMain/80 hover:bg-redMain rounded-md">
+      <button className="w-full mb-1 p-2 text-lg bg-redMain hover:bg-redMain/80 rounded-md">
+        <FontAwesomeIcon className="mr-2" icon={faSquarePlus} />
         Create
       </button>
     </a>

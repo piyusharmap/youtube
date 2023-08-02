@@ -2,6 +2,7 @@ import {
   faBasketball,
   faBook,
   faFilm,
+  faFire,
   faGamepad,
   faMusic,
   faNewspaper,
@@ -14,6 +15,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Channels() {
   return (
     <div className="p-1 flex flex-wrap justify-center items-center gap-4 cursor-default">
+      <div className="py-1 px-2 flex items-center bg-blackSecondary rounded-full hover:bg-white hover:text-blackMain">
+        <div className="h-8 w-8 flex justify-center items-center">
+          <FontAwesomeIcon icon={faFire} />
+        </div>
+        <p className="pr-2 text-sm">Trending</p>
+      </div>
+
       <div className="py-1 px-2 flex items-center bg-blackSecondary rounded-full hover:bg-white hover:text-blackMain">
         <div className="h-8 w-8 flex justify-center items-center">
           <FontAwesomeIcon icon={faUser} />

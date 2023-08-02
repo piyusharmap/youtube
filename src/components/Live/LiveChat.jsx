@@ -56,7 +56,7 @@ export default function LiveChat() {
 
         <div className="mt-2 flex items-center gap-2 self-end">
           <button
-            className="p-2 text-sm bg-blackSecondary hover:bg-blackMain rounded-full"
+            className="p-2 text-sm bg-blackSecondary hover:bg-blackSecondary/80 rounded-full"
             onClick={() => setChatText("")}
           >
             Cancel

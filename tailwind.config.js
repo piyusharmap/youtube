@@ -10,7 +10,7 @@ export default {
       },
       fontFamily: {
         primary: "DM Sans",
-        secondary: "Teko",
+        secondary: "Oswald",
       },
     },
   },

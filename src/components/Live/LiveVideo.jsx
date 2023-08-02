@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faShare, faUser } from "@fortawesome/free-solid-svg-icons";
 
 export default function LiveVideo() {
   return (
@@ -32,7 +32,8 @@ export default function LiveVideo() {
             Subscribe
           </button>
 
-          <button className="h-fit py-2 px-4 text-base bg-blackSecondary hover:bg-blackMain rounded-full">
+          <button className="h-fit py-2 px-4 text-base bg-blackSecondary hover:bg-blackSecondary/80 rounded-full">
+            <FontAwesomeIcon className="mr-2 text-sm" icon={faShare} />
             Share
           </button>
         </div>

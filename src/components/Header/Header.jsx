@@ -1,10 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBell,
-  faSquarePlus,
-  faUser,
-} from "@fortawesome/free-regular-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faSquarePlus, faUser } from "@fortawesome/free-regular-svg-icons";
+import { faBars, faBell, faVideo } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 
 import Searchbar from "./Searchbar";
@@ -37,7 +33,7 @@ export default function Header() {
   return (
     <div className="py-2 px-6 flex justify-between items-center gap-4 bg-blackMain sticky top-0 left-0 z-20">
       <div className="flex items-center gap-4">
-        <div className="flex justify-center items-center gap-2">
+        <div className="flex justify-center items-center gap-1">
           <button
             className="group mr-4 flex justify-center items-center"
             onClick={(e) => handleSidebarToggle(e)}
@@ -57,13 +53,13 @@ export default function Header() {
 
           <img className="w-8 hover:opacity-80" alt="youtube logo" src={Logo} />
 
-          <a href="/" className="font-secondary text-3xl hover:opacity-80">
-            Youtube
+          <a href="/" className="font-secondary text-2xl hover:opacity-80">
+            YouTube
             <span className="ml-1 text-sm opacity-80">IN</span>
           </a>
         </div>
 
-        <div className="ml-4">
+        <div className="ml-4 cursor-pointer">
           <Searchbar />
         </div>
       </div>
@@ -74,7 +70,7 @@ export default function Header() {
             className={`p-2 text-xl border-b-[2px] ${
               showCreate ? "border-redMain" : "border-transparent"
             } hover:border-redMain cursor-pointer`}
-            icon={faSquarePlus}
+            icon={faVideo}
             id="create"
             onClick={() => toggleCreate()}
           />

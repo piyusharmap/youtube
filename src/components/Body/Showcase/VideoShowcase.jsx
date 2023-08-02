@@ -113,7 +113,7 @@ export default function VideoShowcase() {
               Subscribe
             </button>
 
-            <button className="h-fit py-2 px-4 text-base bg-blackSecondary hover:bg-blackMain rounded-full">
+            <button className="h-fit py-2 px-4 text-base bg-blackSecondary hover:bg-blackSecondary/80 rounded-full">
               <FontAwesomeIcon className="mr-2 text-sm" icon={faShare} />
               Share
             </button>

@@ -39,10 +39,12 @@ const appRouter = createBrowserRouter([
   },
   {
     path: "/results",
+    errorElement: <Error />,
     element: <SearchResults />,
   },
   {
     path: "/live",
+    errorElement: <Error />,
     element: <Live />,
   },
 ]);

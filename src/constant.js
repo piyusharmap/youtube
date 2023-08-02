@@ -310,4 +310,6 @@ export const CHAT_DATA = [
   },
 ];
 
+export const SUBSCRIPTIONS = [];
+
 export const LIVE_CHAT_OFFSET = 50;

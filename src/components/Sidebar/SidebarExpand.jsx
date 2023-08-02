@@ -1,22 +1,22 @@
 import {
   faHouse,
-  faFire,
   faSquareCheck,
-  faVideo,
   faGear,
   faCirclePlay,
-  faCertificate,
+  faClapperboard,
+  faPlay,
+  faPhotoFilm,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function SidebarExpand() {
   // For future use: URL Path -> window.location.pathname
   return (
-    <div className="w-1/5 p-2 sticky top-20 left-0">
-      <ul className="py-2 px-4 flex flex-col items-start  border-b-2 border-blackSecondary">
+    <div className="w-1/6 p-2 sticky top-20 left-0">
+      <ul className="px-4 flex flex-col items-start border-b-2 border-blackSecondary">
         <a
           href="/"
-          className="w-full mb-4 flex justify-start items-center gap-2 border-l-2 border-transparent hover:border-redMain"
+          className="mb-4 flex justify-start items-center gap-2 border-l-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">
             <FontAwesomeIcon className="text-lg" icon={faHouse} />
@@ -29,9 +29,9 @@ export default function SidebarExpand() {
           className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">
-            <FontAwesomeIcon className="text-lg" icon={faFire} />
+            <FontAwesomeIcon className="text-lg" icon={faClapperboard} />
           </div>
-          <p>Trending</p>
+          <p>Shorts</p>
         </a>
 
         <a
@@ -49,7 +49,7 @@ export default function SidebarExpand() {
           className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">
-            <FontAwesomeIcon className="text-lg" icon={faVideo} />
+            <FontAwesomeIcon className="text-lg" icon={faPhotoFilm} />
           </div>
           <p>Library</p>
         </a>
@@ -71,7 +71,7 @@ export default function SidebarExpand() {
           className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">
-            <FontAwesomeIcon className="text-lg" icon={faCertificate} />
+            <FontAwesomeIcon className="text-lg text-redMain" icon={faPlay} />
           </div>
           <p>YT Premium</p>
         </div>
@@ -81,7 +81,10 @@ export default function SidebarExpand() {
           className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">
-            <FontAwesomeIcon className="text-lg" icon={faCirclePlay} />
+            <FontAwesomeIcon
+              className="text-lg text-redMain"
+              icon={faCirclePlay}
+            />
           </div>
           <p>YT Music</p>
         </div>

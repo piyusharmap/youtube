@@ -10,8 +10,8 @@ export default function Error() {
       <img className="w-1/2" alt="error" src={ErrorImage} />
       <h1 className="font-secondary text-5xl">{status}</h1>
       <p className="font-secondary text-3xl">{statusText}</p>
-      <p className="p-2 text-xl">
-        Sorry this page isn't available. Try searching for something else
+      <p className="p-2 text-lg">
+        This page isn't available. Try searching something else.
       </p>
     </div>
   );

@@ -70,7 +70,7 @@ export default function Searchbar() {
             searchSuggestions.map((suggestion, index) => {
               return (
                 <a
-                  className="py-1 px-2 block hover:shadow-md"
+                  className="mt-1 py-1 px-2 block hover:bg-blackMain"
                   key={index}
                   onClick={() => {
                     setSearchQuery(suggestion);

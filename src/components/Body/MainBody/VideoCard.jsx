@@ -19,7 +19,7 @@ export default function VideoCard({ info }) {
   const handleMouseEnter = () => {
     timeoutRef.current = setTimeout(() => {
       setShowPreview(true);
-    }, 200);
+    }, 500);
   };
 
   const handleMouseLeave = () => {
@@ -28,15 +28,15 @@ export default function VideoCard({ info }) {
   };
 
   return (
-    <div
-      className="group cursor-pointer"
-      onMouseEnter={() => handleMouseEnter()}
-      onMouseLeave={() => handleMouseLeave()}
-    >
+    <div className="group cursor-pointer">
       <div className="relative">
-        <div className="relative">
+        <div
+          className="relative overflow-hidden rounded-xl"
+          onMouseEnter={() => handleMouseEnter()}
+          onMouseLeave={() => handleMouseLeave()}
+        >
           <img
-            className="w-full rounded-xl group-hover:rounded-none transition-all"
+            className="w-full hover:scale-105 transition-all"
             alt="video thumbnail"
             src={
               snippet?.thumbnails?.medium?.url
