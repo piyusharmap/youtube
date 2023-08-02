@@ -6,7 +6,7 @@ export const VIDEO_LIST_API =
 export const VIDEO_PLAY_API = "https://www.youtube.com/watch?v=";
 
 export const SEARCH_SUGGESTIONS_API =
-  "http://suggestqueries.google.com/complete/search?client=chrome&ds=yt&q=";
+  "https://corsproxy.io/?http://suggestqueries.google.com/complete/search?client=chrome&ds=yt&q=";
 
 export const VIDEO_INFO_API =
   "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=";

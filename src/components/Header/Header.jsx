@@ -17,6 +17,7 @@ export default function Header() {
   const dispatch = useDispatch();
   const [showCreate, setShowCreate] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
+  const [sidebarState, setSidebarState] = useState(true);
 
   const toggleCreate = () => {
     setShowCreate(!showCreate);
@@ -28,23 +29,35 @@ export default function Header() {
     setShowCreate(false);
   };
 
+  const handleSidebarToggle = (e) => {
+    dispatch(toggleSidebar());
+    setSidebarState(!sidebarState);
+  };
+
   return (
     <div className="py-2 px-6 flex justify-between items-center gap-4 bg-blackMain sticky top-0 left-0 z-20">
       <div className="flex items-center gap-4">
         <div className="flex justify-center items-center gap-2">
           <button
-            className="group mr-4"
-            onClick={() => dispatch(toggleSidebar())}
+            className="group mr-4 flex justify-center items-center"
+            onClick={(e) => handleSidebarToggle(e)}
           >
-            <FontAwesomeIcon
-              className="p-2 text-lg group-hover:text-redMain"
-              icon={faBars}
-            />
+            {sidebarState ? (
+              <FontAwesomeIcon
+                className="p-2 text-lg group-hover:text-redMain"
+                icon={faBars}
+              />
+            ) : (
+              <FontAwesomeIcon
+                className="p-2 text-lg opacity-80 group-hover:text-redMain"
+                icon={faBars}
+              />
+            )}
           </button>
 
           <img className="w-8 hover:opacity-80" alt="youtube logo" src={Logo} />
 
-          <a href="/" className="font-secondary text-3xl">
+          <a href="/" className="font-secondary text-3xl hover:opacity-80">
             Youtube
             <span className="ml-1 text-sm opacity-80">IN</span>
           </a>
