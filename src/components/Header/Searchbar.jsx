@@ -69,13 +69,18 @@ export default function Searchbar() {
           {searchSuggestions.length > 0 &&
             searchSuggestions.map((suggestion, index) => {
               return (
-                <p
-                  className="py-1 px-2 hover:shadow-md"
+                <a
+                  className="py-1 px-2 block hover:shadow-md"
                   key={index}
                   onClick={() => {
                     setSearchQuery(suggestion);
                     setSuggestionBoxVisibility(false);
                   }}
+                  href={
+                    searchQuery != ""
+                      ? "/results?search_query=" + searchQuery
+                      : null
+                  }
                 >
                   <span className="px-2">
                     <FontAwesomeIcon
@@ -84,7 +89,7 @@ export default function Searchbar() {
                     />
                   </span>
                   {suggestion}
-                </p>
+                </a>
               );
             })}
 

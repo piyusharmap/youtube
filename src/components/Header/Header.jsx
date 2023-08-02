@@ -68,7 +68,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center">
         <div className="p-2 flex items-center gap-2 relative">
           <FontAwesomeIcon
             className={`p-2 text-xl border-b-[2px] ${
