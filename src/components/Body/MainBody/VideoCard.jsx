@@ -19,11 +19,10 @@ export default function VideoCard({ info }) {
   const handleMouseEnter = () => {
     timeoutRef.current = setTimeout(() => {
       setShowPreview(true);
-    }, 500);
+    }, 200);
   };
 
   const handleMouseLeave = () => {
-    console.log(timeoutRef.current);
     clearTimeout(timeoutRef.current);
     setShowPreview(false);
   };
