@@ -7,24 +7,56 @@ import {
   formatCount,
 } from "../../../utils/formatFunctions";
 import Image from "../../../assets/video_placeholder.webp";
+import { useRef, useState } from "react";
 
 export default function VideoCard({ info }) {
   const snippet = info?.snippet;
   const details = info?.contentDetails;
   const stats = info?.statistics;
+  const [showPreview, setShowPreview] = useState(false);
+  const timeoutRef = useRef();
+
+  const handleMouseEnter = () => {
+    timeoutRef.current = setTimeout(() => {
+      setShowPreview(true);
+    }, 500);
+  };
+
+  const handleMouseLeave = () => {
+    console.log(timeoutRef.current);
+    clearTimeout(timeoutRef.current);
+    setShowPreview(false);
+  };
 
   return (
-    <div className="cursor-pointer">
+    <div
+      className="group cursor-pointer"
+      onMouseEnter={() => handleMouseEnter()}
+      onMouseLeave={() => handleMouseLeave()}
+    >
       <div className="relative">
-        <img
-          className="w-full rounded-md"
-          alt="video thumbnail"
-          src={
-            snippet?.thumbnails?.medium?.url
-              ? snippet?.thumbnails?.medium?.url
-              : Image
-          }
-        />
+        <div className="relative">
+          <img
+            className="w-full rounded-xl group-hover:rounded-none transition-all"
+            alt="video thumbnail"
+            src={
+              snippet?.thumbnails?.medium?.url
+                ? snippet?.thumbnails?.medium?.url
+                : Image
+            }
+          />
+          {showPreview && (
+            <div className="w-full h-full absolute top-0 left-0">
+              <iframe
+                className="w-full h-full"
+                src={
+                  "https://www.youtube.com/embed/" + info?.id + "?autoplay=1"
+                }
+                title="YouTube video player"
+              ></iframe>
+            </div>
+          )}
+        </div>
         <p className="m-1 p-1 text-xs bg-blackSecondary/80 rounded-md absolute bottom-0 right-0">
           {formatDuration(details?.duration)}
         </p>
@@ -37,9 +69,9 @@ export default function VideoCard({ info }) {
         <FontAwesomeIcon className="ml-2 text-xs" icon={faCircleCheck} />
       </p>
 
-      <div className="text-sm flex items-center gap-4 opacity-80">
+      <div className="text-sm flex items-center gap-2 opacity-80">
         <p>{formatCount(stats?.viewCount) + " views"}</p>
-        <p>|</p>
+        <p>•</p>
         <p>{formatPublishedAt(snippet?.publishedAt)}</p>
       </div>
     </div>

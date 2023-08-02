@@ -9,7 +9,7 @@ const CommentItem = ({ info }) => {
 
   return (
     <div className="p-2 flex items-start gap-2 cursor-default">
-      <h1 className="h-8 w-8 flex justify-center items-center bg-blue-600 rounded-full">
+      <h1 className="h-8 w-8 flex justify-center items-center border-2 border-blue-600 rounded-full">
         {info?.author.slice(0, 1)}
       </h1>
 

@@ -18,7 +18,7 @@ export const SEARCH_API =
   "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&q=";
 
 export const SIMILAR_VIDEOS_API =
-  "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=8&type=video&relatedToVideoId=";
+  "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&relatedToVideoId=";
 
 export const VIDEO_SHIMMER_VALUE = 15;
 

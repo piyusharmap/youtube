@@ -10,6 +10,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function SidebarExpand() {
+  // For future use: URL Path -> window.location.pathname
   return (
     <div className="w-1/5 p-2 sticky top-20 left-0">
       <ul className="py-2 px-4 flex flex-col items-start  border-b-2 border-blackSecondary">

@@ -5,8 +5,9 @@ import { formatPublishedAt } from "../../../utils/formatFunctions";
 import Image from "../../../assets/video_placeholder.webp";
 
 export default function SuggestionCard({ info }) {
+  console.log(info);
   return (
-    <div className="w-1/4 mb-2 p-2 cursor-pointer border-[1px] border-transparent hover:border-blackSecondary rounded-md">
+    <div className="w-1/4 mb-2 cursor-pointer border-[1px] border-transparent">
       <img
         className="w-full rounded-md"
         alt="video thumbnail"

@@ -33,7 +33,7 @@ export default function VideosContainer() {
           <Link
             key={video.id}
             to={"/watch?v=" + video.id}
-            className="w-[30%] m-1 p-2 mb-8 rounded-md border-[1px] border-transparent hover:border-blackSecondary"
+            className="w-[30%] m-1 p-2 mb-8"
           >
             <VideoCard info={video} />
           </Link>

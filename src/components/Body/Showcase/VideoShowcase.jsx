@@ -3,6 +3,8 @@ import {
   faChevronDown,
   faChevronUp,
   faShare,
+  faThumbsDown,
+  faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
 import { faCircleDown, faCircleUp } from "@fortawesome/free-regular-svg-icons";
 import { useEffect, useState } from "react";
@@ -92,15 +94,17 @@ export default function VideoShowcase() {
               <button className="group py-1 px-2">
                 <FontAwesomeIcon
                   className="px-1 group-hover:text-redMain"
-                  icon={faCircleUp}
+                  icon={faThumbsUp}
                 />
-                {formatCount(videoInfo?.statistics?.likeCount)}
+                <span className="text-sm">
+                  {formatCount(videoInfo?.statistics?.likeCount)}
+                </span>
               </button>
 
               <button className="group py-1 px-2 border-l-[1px] border-blackSecondary">
                 <FontAwesomeIcon
                   className="px-1 group-hover:text-redMain"
-                  icon={faCircleDown}
+                  icon={faThumbsDown}
                 />
               </button>
             </div>
@@ -121,11 +125,11 @@ export default function VideoShowcase() {
             <p className="p-2">
               {formatCount(videoInfo?.statistics?.viewCount)} views
             </p>
-            <p>|</p>
+            <p>•</p>
             <p className="p-2">
               {formatPublishedAt(videoInfo?.snippet?.publishedAt)}
             </p>
-            <p>|</p>
+            <p>•</p>
             <button
               onClick={() => setShowDescription(!showDiscription)}
               className="py-2 px-4"
