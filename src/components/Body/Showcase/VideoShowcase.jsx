@@ -6,7 +6,6 @@ import {
   faThumbsDown,
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
-import { faCircleDown, faCircleUp } from "@fortawesome/free-regular-svg-icons";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
@@ -59,7 +58,11 @@ export default function VideoShowcase() {
       <div className="w-2/3 p-2 flex flex-col items-center">
         <iframe
           className="h-[500px] w-full"
-          src={"https://www.youtube.com/embed/" + id + "?autoplay=1&mute=1"}
+          src={
+            "https://www.youtube-nocookie.com/embed/" +
+            id +
+            "?autoplay=1&mute=1"
+          }
           title="YouTube video player"
         ></iframe>
 
@@ -163,7 +166,7 @@ export default function VideoShowcase() {
           )}
         </div>
 
-        <div className="w-full border-t-2 border-blackSecondary">
+        <div className="w-full py-4 border-t-2 border-blackSecondary">
           <VideoSuggestions id={videoInfo?.id} />
         </div>
       </div>

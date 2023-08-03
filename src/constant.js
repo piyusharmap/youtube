@@ -1,7 +1,7 @@
 export const API_KEY = "AIzaSyCZxpmXTY1LWMyMMPfGUHWX-kpeHXj5fGY";
 
 export const VIDEO_LIST_API =
-  "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=20&regionCode=IN&key=";
+  "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=45&regionCode=IN&key=";
 
 export const VIDEO_PLAY_API = "https://www.youtube.com/watch?v=";
 
@@ -234,6 +234,185 @@ export const COMMENTS_DATA = [
     comment: "Great explanation, thanks!",
     replies: [],
     postedAt: "1 day ago",
+  },
+  {
+    id: 1800,
+    author: "Riley-James Hopkins",
+    comment: "Very insightful, loved it!",
+    replies: [],
+    postedAt: "3 hours ago",
+  },
+  {
+    id: 1900,
+    author: "Alaya Dunlop",
+    comment: "Great content, keep it coming!",
+    replies: [
+      {
+        id: 1201,
+        author: "Taliah Wyatt",
+        comment: "I agree, looking forward to more!",
+        replies: [],
+        postedAt: "2 hours ago",
+      },
+    ],
+    postedAt: "4 hours ago",
+  },
+  {
+    id: 2000,
+    author: "Zayn Whitworth",
+    comment: "Awesome presentation!",
+    replies: [],
+    postedAt: "1 hour ago",
+  },
+  {
+    id: 2100,
+    author: "Sierra O'Doherty",
+    comment: "Thanks for the valuable insights!",
+    replies: [],
+    postedAt: "2 days ago",
+  },
+  {
+    id: 2200,
+    author: "Mohammed Rankin",
+    comment: "Well explained, thumbs up!",
+    replies: [],
+    postedAt: "6 hours ago",
+  },
+  {
+    id: 2300,
+    author: "Liya Mathews",
+    comment: "Short and to the point, loved it!",
+    replies: [],
+    postedAt: "30 minutes ago",
+  },
+  {
+    id: 2400,
+    author: "Idrees Moran",
+    comment: "Excellent content, very helpful!",
+    replies: [],
+    postedAt: "3 hours ago",
+  },
+  {
+    id: 2500,
+    author: "Laraib Pollard",
+    comment: "Thanks for sharing this with us!",
+    replies: [],
+    postedAt: "2 hours ago",
+  },
+  {
+    id: 2600,
+    author: "Emaan Roche",
+    comment: "Keep up the good work!",
+    replies: [
+      {
+        id: 1301,
+        author: "Ishanah Cuevas",
+        comment: "Agreed, you're doing great!",
+        replies: [],
+        postedAt: "1 hour ago",
+      },
+    ],
+    postedAt: "1 day ago",
+  },
+  {
+    id: 2700,
+    author: "Nawal Hilton",
+    comment: "Very informative video!",
+    replies: [],
+    postedAt: "4 hours ago",
+  },
+  {
+    id: 2800,
+    author: "Hadiya Spencer",
+    comment: "Loved the content, thanks!",
+    replies: [],
+    postedAt: "1 hour ago",
+  },
+  {
+    id: 2900,
+    author: "Yuvraj Britton",
+    comment: "Awesome job, keep it up!",
+    replies: [],
+    postedAt: "10 minutes ago",
+  },
+  {
+    id: 3000,
+    author: "Waleed Childs",
+    comment: "Great video, very helpful!",
+    replies: [
+      {
+        id: 1401,
+        author: "Yara Whitmore",
+        comment: "Thanks for sharing your knowledge!",
+        replies: [],
+        postedAt: "1 day ago",
+      },
+      {
+        id: 1402,
+        author: "Waleed Childs",
+        comment: "You're welcome! Happy to help!",
+        replies: [],
+        postedAt: "5 hours ago",
+      },
+    ],
+    postedAt: "1 day ago",
+  },
+  {
+    id: 3100,
+    author: "Sidrah Lawrence",
+    comment: "Very interesting topic!",
+    replies: [],
+    postedAt: "2 hours ago",
+  },
+  {
+    id: 3200,
+    author: "Jaya Shepherd",
+    comment: "Thanks for the valuable information!",
+    replies: [],
+    postedAt: "1 hour ago",
+  },
+  {
+    id: 3300,
+    author: "Aaryan Mcgill",
+    comment: "Short and sweet, loved it!",
+    replies: [],
+    postedAt: "5 hours ago",
+  },
+  {
+    id: 3400,
+    author: "Reema Mcknight",
+    comment: "Great work, keep it coming!",
+    replies: [
+      {
+        id: 1501,
+        author: "Arianna Whittaker",
+        comment: "Can't wait for more!",
+        replies: [],
+        postedAt: "30 minutes ago",
+      },
+    ],
+    postedAt: "3 hours ago",
+  },
+  {
+    id: 3500,
+    author: "Mikaeel Perez",
+    comment: "Thanks for sharing this knowledge!",
+    replies: [],
+    postedAt: "2 hours ago",
+  },
+  {
+    id: 3600,
+    author: "Maira Prosser",
+    comment: "Awesome content, keep it up!",
+    replies: [],
+    postedAt: "1 day ago",
+  },
+  {
+    id: 3700,
+    author: "Arwa Shaffer",
+    comment: "Impressive explanation!",
+    replies: [],
+    postedAt: "1 hour ago",
   },
 ];
 

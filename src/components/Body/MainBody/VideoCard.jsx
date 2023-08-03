@@ -36,29 +36,32 @@ export default function VideoCard({ info }) {
           onMouseLeave={() => handleMouseLeave()}
         >
           <img
-            className="w-full hover:scale-105 transition-all"
+            className="h-52 w-full object-cover hover:opacity-80 transition-all"
             alt="video thumbnail"
             src={
-              snippet?.thumbnails?.medium?.url
-                ? snippet?.thumbnails?.medium?.url
+              snippet?.thumbnails?.high?.url
+                ? snippet?.thumbnails?.high?.url
                 : Image
             }
           />
+          <p className="m-1 p-1 text-xs bg-blackSecondary/80 rounded-md absolute bottom-0 right-0">
+            {formatDuration(details?.duration)}
+          </p>
+
           {showPreview && (
             <div className="w-full h-full absolute top-0 left-0">
-              <iframe
+              <object
                 className="w-full h-full"
-                src={
-                  "https://www.youtube.com/embed/" + info?.id + "?autoplay=1"
+                data={
+                  "https://www.youtube-nocookie.com/embed/" +
+                  info?.id +
+                  "?autoplay=1&mute=1"
                 }
                 title="YouTube video player"
-              ></iframe>
+              ></object>
             </div>
           )}
         </div>
-        <p className="m-1 p-1 text-xs bg-blackSecondary/80 rounded-md absolute bottom-0 right-0">
-          {formatDuration(details?.duration)}
-        </p>
       </div>
 
       <h1 className="mt-1">{snippet?.title}</h1>

@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSquarePlus, faUser } from "@fortawesome/free-regular-svg-icons";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faBars, faBell, faVideo } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
+import { useState } from "react";
 
 import Searchbar from "./Searchbar";
 import Logo from "../../assets/youtube_logo.svg";
 import { toggleSidebar } from "../../app/slices/sidebarSlice";
-import { useState } from "react";
 import NotificationBox from "./NotificationBox";
 
 export default function Header() {
@@ -31,7 +31,7 @@ export default function Header() {
   };
 
   return (
-    <div className="py-2 px-6 flex justify-between items-center gap-4 bg-blackMain sticky top-0 left-0 z-20">
+    <div className="py-1 px-6 flex justify-between items-center gap-4 bg-blackMain sticky top-0 left-0 z-20">
       <div className="flex items-center gap-4">
         <div className="flex justify-center items-center gap-1">
           <button
@@ -51,7 +51,13 @@ export default function Header() {
             )}
           </button>
 
-          <img className="w-8 hover:opacity-80" alt="youtube logo" src={Logo} />
+          <a href="/">
+            <img
+              className="w-8 hover:opacity-80"
+              alt="youtube logo"
+              src={Logo}
+            />
+          </a>
 
           <a href="/" className="font-secondary text-2xl hover:opacity-80">
             YouTube

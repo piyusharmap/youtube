@@ -20,7 +20,7 @@ export default function SidebarCompact() {
         </a>
 
         <a
-          href="#"
+          href="/"
           className="mb-4 flex flex-col justify-center items-start border-b-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">
@@ -29,7 +29,7 @@ export default function SidebarCompact() {
         </a>
 
         <a
-          href="#"
+          href="/"
           className="mb-4 flex flex-col justify-center items-start border-b-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">
@@ -38,7 +38,7 @@ export default function SidebarCompact() {
         </a>
 
         <a
-          href="#"
+          href="/"
           className="mb-4 flex flex-col justify-center items-start border-b-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">

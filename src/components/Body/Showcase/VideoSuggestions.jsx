@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
-import { API_KEY, SIMILAR_VIDEOS_API } from "../../../constant";
+import { API_KEY, VIDEO_LIST_API } from "../../../constant";
 import SuggestionCard from "./SuggestionCard";
+import VideosContainerShimmer from "../MainBody/VideosContainerShimmer";
 
 export default function VideoSuggestions({ id }) {
   const [videoSuggestions, setVideoSuggestions] = useState([]);
@@ -12,22 +13,32 @@ export default function VideoSuggestions({ id }) {
 
   const getSimilarVideos = async () => {
     try {
-      const data = await fetch(SIMILAR_VIDEOS_API + id + "&key=" + API_KEY);
+      const data = await fetch(VIDEO_LIST_API + API_KEY);
       const json = await data.json();
 
-      setVideoSuggestions(json?.items);
+      setVideoSuggestions(json?.items.slice(0, 18));
     } catch (error) {
       console.log(error);
       setVideoSuggestions(null);
     }
   };
 
+  if (!videoSuggestions) return <VideosContainerShimmer />;
+
   return (
     <div className="p-2 flex flex-wrap justify-between items-start gap-2">
       {videoSuggestions &&
         videoSuggestions.map((video) => {
           {
-            return <SuggestionCard key={video?.id?.videoId} info={video} />;
+            return (
+              <a
+                className="w-[30%] mb-2 cursor-pointer"
+                key={video?.id}
+                href={"/watch?v=" + video.id}
+              >
+                <SuggestionCard info={video} />
+              </a>
+            );
           }
         })}
     </div>

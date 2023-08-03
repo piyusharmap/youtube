@@ -5,9 +5,8 @@ import { formatPublishedAt } from "../../../utils/formatFunctions";
 import Image from "../../../assets/video_placeholder.webp";
 
 export default function SuggestionCard({ info }) {
-  console.log(info);
   return (
-    <div className="w-1/4 mb-2 cursor-pointer border-[1px] border-transparent">
+    <div className="mb-2">
       <img
         className="w-full rounded-md"
         alt="video thumbnail"
@@ -18,9 +17,9 @@ export default function SuggestionCard({ info }) {
         }
       />
 
-      <h1 className="text-lg">{info?.snippet?.title.slice(0, 40) + "..."}</h1>
+      <h1 className="mt-2">{info?.snippet?.title.slice(0, 40) + "..."}</h1>
 
-      <p className="hover:opacity-100">
+      <p className="text-sm hover:opacity-100">
         {info?.snippet?.channelTitle}
         <FontAwesomeIcon className="ml-2 text-xs" icon={faCircleCheck} />
       </p>

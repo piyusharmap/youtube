@@ -34,9 +34,9 @@ const TypeVideo = ({ info }) => {
 const TypeChannel = ({ info }) => {
   const { snippet } = info;
   return (
-    <div className="w-full p-2 flex items-center gap-4">
+    <div className="p-4 flex items-center gap-4">
       <img
-        className="h-24 w-24 rounded-full outline outline-2 outline-redMain outline-offset-2"
+        className="h-28 w-28 rounded-full outline outline-2 outline-redMain outline-offset-2"
         alt="video thumbnail"
         src={snippet?.thumbnails?.medium?.url}
       />

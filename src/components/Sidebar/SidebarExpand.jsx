@@ -25,7 +25,7 @@ export default function SidebarExpand() {
         </a>
 
         <a
-          href="#"
+          href="/"
           className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">
@@ -35,7 +35,7 @@ export default function SidebarExpand() {
         </a>
 
         <a
-          href="#"
+          href="/"
           className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">
@@ -45,7 +45,7 @@ export default function SidebarExpand() {
         </a>
 
         <a
-          href="#"
+          href="/"
           className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain"
         >
           <div className="h-8 w-8 flex justify-center items-center">
@@ -56,30 +56,21 @@ export default function SidebarExpand() {
       </ul>
 
       <ul className="py-2 px-4 flex flex-col items-start  border-b-2 border-blackSecondary cursor-pointer">
-        <div
-          href="/"
-          className="w-full mb-4 flex justify-start items-center gap-2 border-l-2 border-transparent hover:border-redMain"
-        >
+        <div className="w-full mb-4 flex justify-start items-center gap-2 border-l-2 border-transparent hover:border-redMain">
           <div className="h-8 w-8 flex justify-center items-center">
             <FontAwesomeIcon className="text-lg" icon={faGear} />
           </div>
           <p>Settings</p>
         </div>
 
-        <div
-          href="#"
-          className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain"
-        >
+        <div className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain">
           <div className="h-8 w-8 flex justify-center items-center">
             <FontAwesomeIcon className="text-lg text-redMain" icon={faPlay} />
           </div>
           <p>YT Premium</p>
         </div>
 
-        <div
-          href="#"
-          className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain"
-        >
+        <div className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain">
           <div className="h-8 w-8 flex justify-center items-center">
             <FontAwesomeIcon
               className="text-lg text-redMain"

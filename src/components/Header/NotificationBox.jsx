@@ -7,26 +7,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const TypeCreate = () => {
   return (
-    <a
-      href="/live"
-      className="w-36 p-2 bg-blackSecondary absolute top-full right-0 rounded-md shadow-lg"
-    >
-      <button className="w-full mb-1 p-2 text-lg bg-redMain hover:bg-redMain/80 rounded-md">
+    <div className="w-36 p-2 bg-blackSecondary absolute top-full right-0 rounded-md shadow-lg">
+      <a
+        href="/live"
+        className="w-full mb-1 p-2 text-lg text-center bg-redMain hover:bg-redMain/80 rounded-md block"
+      >
         <FontAwesomeIcon className="mr-2" icon={faPodcast} />
         Go Live
-      </button>
+      </a>
 
-      <button className="w-full mb-1 p-2 text-lg bg-redMain hover:bg-redMain/80 rounded-md">
+      <a className="w-full mb-1 p-2 text-lg text-center bg-redMain hover:bg-redMain/80 rounded-md block">
         <FontAwesomeIcon className="mr-2" icon={faSquarePlus} />
         Create
-      </button>
-    </a>
+      </a>
+    </div>
   );
 };
 
 const TypeNotification = () => {
   return (
-    <div className="w-96 bg-blackSecondary absolute top-full right-0 rounded-md shadow-lg">
+    <div className="w-80 bg-blackSecondary absolute top-full right-0 rounded-md shadow-lg">
       <h1 className="mb-2 p-4 border-b-2 border-blackMain">
         <FontAwesomeIcon className="mr-2" icon={faGear} />
         Notifications

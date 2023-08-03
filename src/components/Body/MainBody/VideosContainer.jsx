@@ -17,7 +17,7 @@ export default function VideosContainer() {
       const data = await fetch(VIDEO_LIST_API + API_KEY);
       const json = await data.json();
 
-      setVideoList(json.items);
+      setVideoList(json?.items);
     } catch (error) {
       console.log(error);
       setVideoList([]);
