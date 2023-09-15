@@ -39,12 +39,12 @@ export default function VideoCard({ info }) {
             className="h-52 w-full object-cover hover:opacity-80 transition-all"
             alt="video thumbnail"
             src={
-              snippet?.thumbnails?.high?.url
-                ? snippet?.thumbnails?.high?.url
+              snippet?.thumbnails?.medium?.url
+                ? snippet?.thumbnails?.medium?.url
                 : Image
             }
           />
-          <p className="m-1 p-1 text-xs bg-blackSecondary/80 rounded-md absolute bottom-0 right-0">
+          <p className="m-1 p-1 text-xs bg-white/50 dark:bg-blackMain/50 rounded-md absolute bottom-0 right-0">
             {formatDuration(details?.duration)}
           </p>
 

@@ -31,8 +31,8 @@ export default function Header() {
   };
 
   return (
-    <div className="py-1 px-6 flex justify-between items-center gap-4 bg-blackMain sticky top-0 left-0 z-20">
-      <div className="flex items-center gap-4">
+    <div className="py-1 px-6 text-blackMain dark:text-white flex justify-between items-center gap-4 sticky top-0 left-0 z-20 bg-white dark:bg-blackMain dard:bg-blackMain">
+      <div className="flex items-center gap-4"> 
         <div className="flex justify-center items-center gap-1">
           <button
             className="group mr-4 flex justify-center items-center"

@@ -3,9 +3,9 @@ import { VIDEO_SHIMMER_VALUE } from "../../../constant";
 const ShimmerCard = () => {
   return (
     <div className="w-[30%] m-1 p-2 mb-8">
-      <div className="h-48 w-full bg-blackSecondary rounded-xl"></div>
-      <div className="mt-2 h-8 bg-blackSecondary rounded-lg"></div>
-      <div className="w-1/4 mt-2 h-4 bg-blackSecondary rounded-lg"></div>
+      <div className="h-48 w-full bg-blackMain/50 dark:bg-white/50 rounded-xl"></div>
+      <div className="mt-2 h-8 bg-blackMain/50 dark:bg-white/50 rounded-lg"></div>
+      <div className="w-1/4 mt-2 h-4 bg-blackMain/50 dark:bg-white/50 rounded-lg"></div>
     </div>
   );
 };

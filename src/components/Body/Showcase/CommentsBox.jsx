@@ -84,7 +84,7 @@ export default function CommentsBox() {
           }}
         >
           <input
-            className="w-full p-2 bg-transparent border-b-[1px] border-blackSecondary focus:outline-0"
+            className="w-full p-2 bg-transparent border-b-[1px] border-blackSecondary focus:outline-none"
             type="text"
             placeholder="Add a comment"
             value={commentText}

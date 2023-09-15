@@ -47,9 +47,9 @@ export default function Searchbar() {
   };
 
   return (
-    <div className="px-2 flex items-center bg-blackSecondary/50 rounded-full relative">
+    <div className="px-2 text-blackMain dark:text-white flex items-center border-[1px] border-blackMain/50 dark:border-white/50 rounded-full relative">
       <input
-        className="w-96 p-2 text-base bg-transparent focus:outline-0"
+        className="w-96 p-2 text-base bg-transparent focus:outline-none"
         type="text"
         placeholder="Search"
         value={searchQuery}
@@ -65,12 +65,12 @@ export default function Searchbar() {
       </a>
 
       {suggestionBoxVisibility && searchSuggestions.length > 0 && (
-        <div className="w-full bg-blackSecondary absolute top-[110%] left-0 rounded-md">
+        <div className="w-full text-blackMain dark:text-white bg-white dark:bg-blackMain absolute top-[110%] left-0 rounded-md">
           {searchSuggestions.length > 0 &&
             searchSuggestions.map((suggestion, index) => {
               return (
                 <a
-                  className="mt-1 py-1 px-2 block hover:bg-blackMain"
+                  className="mt-1 py-1 px-2 block hover:bg-blackMain/50 dark:hover:bg-white/50"
                   key={index}
                   onClick={() => {
                     setSearchQuery(suggestion);

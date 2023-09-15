@@ -11,7 +11,7 @@ import SearchResults from "./Body/SearchResults/SearchResults";
 
 export default function App() {
   return (
-    <div className="hidden md:block bg-blackMain text-white font-primary cursor-default">
+    <div className="hidden md:block text-blackMain dark:text-white bg-white dark:bg-blackMain font-primary cursor-default">
       <Header />
       <div className="min-h-screen flex items-start relative">
         <Sidebar />

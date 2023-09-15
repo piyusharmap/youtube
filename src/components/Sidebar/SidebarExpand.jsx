@@ -8,11 +8,30 @@ import {
   faPhotoFilm,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
 
 export default function SidebarExpand() {
   // For future use: URL Path -> window.location.pathname
+
+  const [theme, setTheme] = useState("dark")
+
+  useEffect(()=>{
+    const htmlElement = document.querySelector("html")
+    htmlElement.classList.remove("light", "dark") 
+    htmlElement.classList.add(theme)
+  }, [theme])
+
+  const handleThemeToggle = () => {
+    if(theme === "light"){
+      setTheme("dark")
+    }
+    else{
+      setTheme("light")
+    }
+  }
+
   return (
-    <div className="w-1/6 p-2 sticky top-20 left-0">
+    <div className="w-fit p-2 sticky top-20 left-0">
       <ul className="px-4 flex flex-col items-start border-b-2 border-blackSecondary">
         <a
           href="/"
@@ -60,7 +79,11 @@ export default function SidebarExpand() {
           <div className="h-8 w-8 flex justify-center items-center">
             <FontAwesomeIcon className="text-lg" icon={faGear} />
           </div>
-          <p>Settings</p>
+          <button 
+            onClick={() => handleThemeToggle()}
+          >
+            Appearance: {theme.charAt(0).toUpperCase() + theme.slice(1)}
+          </button>
         </div>
 
         <div className="w-full mb-4 flex items-center gap-2 border-l-2 border-transparent hover:border-redMain">

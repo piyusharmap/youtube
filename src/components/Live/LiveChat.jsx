@@ -46,7 +46,7 @@ export default function LiveChat() {
           }}
         >
           <input
-            className="w-full p-2 bg-transparent border-b-[1px] border-blackSecondary focus:outline-0"
+            className="w-full p-2 bg-transparent border-b-[1px] border-blackSecondary focus:outline-none"
             type="text"
             placeholder="Join the conversation..."
             value={chatText}
@@ -56,7 +56,7 @@ export default function LiveChat() {
 
         <div className="mt-2 flex items-center gap-2 self-end">
           <button
-            className="p-2 text-sm bg-blackSecondary hover:bg-blackSecondary/80 rounded-full"
+            className="p-2 text-sm text-blackMain dark:text-white hover:bg-blackMain/50 dark:hover:bg-white/50 rounded-full"
             onClick={() => setChatText("")}
           >
             Cancel
@@ -71,7 +71,7 @@ export default function LiveChat() {
         </div>
       </div>
 
-      <div className="h-screen w-full p-2 flex flex-col items-center bg-blackSecondary rounded-lg">
+      <div className="h-screen w-full p-2 flex flex-col items-center rounded-lg">
         <h1 className="w-full p-2 shadow-lg">Live Chat</h1>
 
         <div className="w-full overflow-y-scroll flex-grow">
